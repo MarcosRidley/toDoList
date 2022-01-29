@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ridley's To-do list</title>
+    <link href="./src/styles.css" rel="stylesheet">
+</head>
+<body>
+    <main id="main">
+        <div class="header-div"><p>	
+            &#10003&#10003 Ridley's To-do list</p><p></p></div>
+        <div class="planner">
+            <div class="tabs">
+                <div id="geral" class="tab"><button id="generalButton" class="tab-btn">Geral</button></div>
+                <div id="projects" class="tab"><button id="projectsButton" class="tab-btn">Projetos</button><button class="tab-btn project">Academia</button><button class="tab-btn project">Programação</button></div>
+                <button id="newButton">+</button>
+            </div>
+            <div class="display">
+                <div class="sort-buttons-div">
+                    <button class="sortbtn">Sort by Date</button><button class="sortbtn">Sort by Priority</button>
+                </div>
+                <div>
+                    <div id="content"><div class="spread"><div><span>oi</span></div><span> 02/05/2022</span><button class="deleteBtn">Delete</button></div><div id="content"><div class="spread"><div><span>oi</span></div><span> 02/05/2022</span><button class="deleteBtn">Delete</button></div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+<script src="dist/main.js"></script>
+</html>
