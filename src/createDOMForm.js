@@ -16,8 +16,29 @@ export function createDOMForm(form) {
         details.placeholder = "Details about your task"
         form.appendChild(details)
     const priority = document.createElement("button");
+        priority.type = "button";
         priority.textContent = "Low";
         priority.id = "priorityButton";
-        priority.classList.add("form-buttons");
+        priority.classList.add("form-buttons", "lowPriority");
+        priority.onclick = () => changePriority(priority)
         form.appendChild(priority);
+}
+
+
+
+function changePriority(node){
+    if(node.textContent == "Low") {
+        node.textContent = "Medium";
+        node.classList.add("mediumPriority");
+        node.classList.remove("lowPriority");
+    } else if(node.textContent == "Medium") {
+        node.textContent = "High";
+        node.classList.add("highPriority");
+        node.classList.remove("mediumPriority");
+    }else if(node.textContent == "High"){
+        node.textContent = "Low"
+        node.classList.add("lowPriority");
+        node.classList.remove("highPriority");
+    }
+
 }

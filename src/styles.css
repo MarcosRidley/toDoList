@@ -126,7 +126,7 @@ main, .newTaskWindow {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #852d7b;
 }
-.sortbtn:hover {
+.sortbtn:hover, .closingDiv:hover {
 	background:linear-gradient(to bottom, #f0a8be 5%, #c38d9e 100%);
 	background-color:#f0a8be;
 }
@@ -187,12 +187,29 @@ main, .newTaskWindow {
     margin: 2px 5px;
 }
 
+.closingDiv {
+    background-color: #852d7b;
+    border-radius: 0px 10px 3px 20px ;
+}
 
 
+.newTaskFormContent {
+    display: flex;
+    flex-direction: column;
+}
 
+.lowPriority {
+    background-color: lime;
+}
+.mediumPriority {
+    background-color: yellow;
+}
+.highPriority {
+    background-color: red;
+}
 
 
 
 .hidden {
-    visibility: hidden;
+    display: none;
 }
