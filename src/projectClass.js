@@ -83,17 +83,21 @@ export class Task {
             const title = document.createElement("p");
             title.textContent = this.title;
             task.appendChild(title);
-            const details = document.createElement("p");
-            details.textContent = this.details;
-            task.appendChild(details);
+            const everythingElse = document.createElement("div");
+            everythingElse.classList.add("details")
             const dueDate = document.createElement("p");
             dueDate.textContent = this.dueDate;
-            task.appendChild(dueDate);
+            everythingElse.appendChild(dueDate);
+            const details = document.createElement("button");
+            details.textContent = "Details";
+            details.addEventListener("click", () => console.log("detalhes"))
+            everythingElse.appendChild(details);
             this.addPriorityStyle(task)
             const deleteButton = document.createElement("button");
-            deleteButton.textContent = "x";
+            deleteButton.textContent = "Delete";
             deleteButton.addEventListener("click", () => this.removeTask(task))
-            task.appendChild(deleteButton)
+            everythingElse.appendChild(deleteButton)
+            task.appendChild(everythingElse)
         document.getElementById("content").appendChild(task)    
     }
     initialize() {

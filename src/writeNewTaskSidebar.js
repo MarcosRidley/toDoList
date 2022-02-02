@@ -4,11 +4,11 @@ export function writeNewTaskSidebar(window) {
             const projectOrTask = document.createElement("div");
                 projectOrTask.classList.add("projectOrTask")
                 const taskButton = document.createElement("button");
-                taskButton.classList.add("tab-btn", "active")
+                taskButton.classList.add("tab-btn", "activeBtn")
                 taskButton.id = "taskBtn"
                 taskButton.textContent = "Task";
                 const projectButton = document.createElement("button");
-                projectButton.classList.add("tab-btn", "inactive")
+                projectButton.classList.add("tab-btn", "inactiveBtn")
                 projectButton.id = "projectBtn"
                 projectButton.textContent = "Project"
                 projectOrTask.appendChild(taskButton);

@@ -36,14 +36,18 @@ function displayForm(isTaskOrProject) {
         taskOrProject = "Task"
         document.getElementById("newProjectForm").classList.add("hidden");
         document.getElementById("newTaskForm").classList.remove("hidden");
-        document.getElementById("projectBtn").classList.add("inactive");
-        document.getElementById("taskBtn").classList.remove("inactive");
+        document.getElementById("projectBtn").classList.add("inactiveBtn");
+        document.getElementById("projectBtn").classList.remove("activeBtn")
+        document.getElementById("taskBtn").classList.remove("inactiveBtn");
+        document.getElementById("taskBtn").classList.add("activeBtn")
     } else {
         taskOrProject = "Project"
         document.getElementById("newTaskForm").classList.add("hidden");
         document.getElementById("newProjectForm").classList.remove("hidden");
-        document.getElementById("taskBtn").classList.add("inactive");
-        document.getElementById("projectBtn").classList.remove("inactive");
+        document.getElementById("taskBtn").classList.add("inactiveBtn");
+        document.getElementById("taskBtn").classList.remove("activeBtn")
+        document.getElementById("projectBtn").classList.remove("inactiveBtn");
+        document.getElementById("projectBtn").classList.add("activeBtn")
     }
 }
 
