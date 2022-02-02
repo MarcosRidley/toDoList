@@ -20,7 +20,7 @@ export class Project {
         this.turnActive(document.getElementById(this.projectName))
         const activeProject = defineActive();
         for(let i = 0; i < tasks.length; i++) {
-            if(document.getElementById(tasks[i].title)){tasks[i].removeTask(document.getElementById(tasks[i].title), false);}
+            if(document.getElementById(tasks[i].title)){tasks[i].removeTask(document.getElementById(`${tasks[i].title}.task`), false);}
         }
          for(let i = 0; i < tasks.length; i++){
             if(tasks[i].project == activeProject) {
@@ -79,7 +79,7 @@ export class Task {
     writeToDOM() {
         const task = document.createElement("div");
         task.classList.add("spread");
-        task.id = this.title;
+        task.id = `${this.title}.task`;
             const title = document.createElement("p");
             title.textContent = this.title;
             task.appendChild(title);
@@ -90,7 +90,7 @@ export class Task {
             everythingElse.appendChild(dueDate);
             const details = document.createElement("button");
             details.textContent = "Details";
-            details.addEventListener("click", () => console.log("detalhes"))
+            details.addEventListener("click", () => this.toggleDetails())
             everythingElse.appendChild(details);
             this.addPriorityStyle(task)
             const deleteButton = document.createElement("button");
@@ -106,9 +106,20 @@ export class Task {
     }
 
     toggleDetails() {
-        const thisTask = document.getElementById(this.name);
+        const thisTask = document.getElementById(`${this.title}.task`);
+        const taskDetailsDiv = document.createElement("div");
         const taskDetails = document.createElement("div");
-        // const 
+        taskDetailsDiv.id = `${this.title}.details`;
+            const taskDetailsProject = document.createElement("p");
+                taskDetailsProject.textContent = `Project name: ${this.project}`;
+                taskDetails.appendChild(taskDetailsProject);
+            const taskDetailsDetails = document.createElement("p");
+                taskDetailsDetails.textContent = `Details: ${this.details}`;
+                taskDetails.appendChild(taskDetailsDetails);
+            const taskDetailsPriority = document.createElement("p");
+                taskDetailsPriority.textContent = `Priority: ${this.priority}`;
+                taskDetails.appendChild(taskDetailsPriority);
+                taskDetailsDiv.appendChild(taskDetails);
+                thisTask.appendChild(taskDetailsDiv);
     }
-
 }

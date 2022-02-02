@@ -16,7 +16,7 @@ main {
     flex-direction: column;
     width: fit-content;
 }
-@media (min-width: 820px)
+@media (min-width: 656px)
 {
   main {
       width: 100%;
