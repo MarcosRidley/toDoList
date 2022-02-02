@@ -1,3 +1,5 @@
+import { toggleBackgroundBlur } from "./toggleBackgroundBlur";
+
 export function writeHeader(window) {
     const newTaskHeader = document.createElement("div");
             newTaskHeader.classList.add("newTaskHeader");
@@ -13,7 +15,8 @@ export function writeHeader(window) {
 }
 
 
-function closeNewTaskSideBar(tab) {
+export function closeNewTaskSideBar(tab) {
+    toggleBackgroundBlur();
     tab.classList.add("hidden");
 
 }

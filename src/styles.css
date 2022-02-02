@@ -1,20 +1,64 @@
+html {
+    display: flex;
+}
+
 body {
+    margin:0;
+    width: 100%;
     background: linear-gradient(to right bottom, rgba(3, 105, 92, 0.8), rgba(117, 216, 213, 0.9)), url("woodbackground.jpg");
     font-family:Tahoma, sans-serif;
     font-size: 32px;
+    display: flex;
+    flex-direction:column;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+@media (min-width: 820px)
+{
+  main {
+      width: 100%;
+  }
 }
 
 
+
+p {
+    font-size: 16px;
+}
+img {
+    color:white
+}
+.header-div {
+    display: inline-flex;
+    justify-content: space-between;
+    font-size: 24px;
+    align-items: center;
+}
 .header-div, .newTaskHeader {
     background-color: #C38D9E;
-    
 }
 .header-div>p, .newTaskHeader>div {
     color: white;
     padding: 0.3em 1em 0.4em;
-    font-weight: normal;
-    color: #EEEEEE
 }
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    align-items: center;
+    margin: 0.5em 1em;
+    color: white
+}
+
+#github:hover {
+    transform: scale(1.2);
+}
+
 
 .planner {
     display: flex;
@@ -31,8 +75,8 @@ body {
 .tab {
     padding-bottom: .8em;
 }
-.tab-btn, .details>button {
-	box-shadow:inset 0px 1px 0px 0px black;
+.tab-btn, .details>button, #submit {
+	box-shadow: 0.2rem 0.5rem 1rem rgb(0 0 0 / 40%);
     color:#501F3A;
 	border-radius:5px;
     width: 100%;
@@ -59,7 +103,7 @@ body {
 
 
 .tab-btn:hover, .project:hover {
-border-right: 20px solid lime;
+border-right: 10px solid #d38d9e;
 }
 .tab-btn:active {
 	position:relative;
@@ -94,6 +138,11 @@ border-right: 20px solid lime;
     top:1px;
     }
 
+.blur{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    }
+
 
 .display {
     flex: 4;
@@ -106,16 +155,19 @@ border-right: 20px solid lime;
 }
 
 #content>div {
-    padding: 0.5em;
+    padding: 0.2em;
 }
 .lowPriority {
     border-left: 10px solid #1D8E1D;
+    border-right: 10px solid #1D8E1D;
 }
 .mediumPriority {
     border-left: 10px solid#FFA500;
+    border-right: 10px solid#FFA500;
 }
 .highPriority {
     border-left: 10px solid #FF0000;
+    border-right: 10px solid #FF0000;
 }
 
 
@@ -124,6 +176,10 @@ border-right: 20px solid lime;
     justify-content:space-between;
     border-bottom: 1px solid black;
     margin: 1px;
+    align-items: center;
+}
+.spread>p {
+    margin-right: 3em;
 }
 .details {
     display: flex;
@@ -144,14 +200,16 @@ border-right: 20px solid lime;
 
 .newTaskWindow {
     background-color: #fff;
+    width: 70%;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
-
+    box-shadow: 5px 5px 15px 5px #222
 }
 .newTaskHeader {
+
     background-color: #c38d9e;
     width: 100%;
     border-radius: 10px 10px 0 0;
@@ -180,6 +238,10 @@ border-right: 20px solid lime;
 
 .projectOrTask {
     display:flex;
+    flex-direction: column;
+}
+.projectOrTask>button {
+    margin: 5px
 }
 
 .active, .inactive {
@@ -191,11 +253,12 @@ border-right: 20px solid lime;
     transform: scale(0.9)
 }
 .active {
-    border-right: 20px solid lime;
+    border-right: 10px solid #c38d9e;
 }
 
 .activeBtn {
-    background-color: lime
+    background-color: #c38d9e;
+    color: #eee;
 }
 .activeBtn:hover, .inactiveBtn:hover {
     border-right:2px solid rgb(118, 118, 118)
@@ -205,6 +268,10 @@ border-right: 20px solid lime;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 4px solid #c38d9e;
+    border-radius: 8px;
+    padding: 0.5em;
+    margin: 1em;
 }
 #newTaskForm{
 display: flex;
@@ -212,25 +279,42 @@ display: flex;
     justify-content: space-around;
     align-items: center;
 }
+#newTaskForm>input, #newProjectForm {
+    box-shadow: 0.2rem 0.5rem 1rem rgb(0 0 0 / 20%);
+    border-width: 5px;
+    border-radius: 12px;
+}
 #title, #date, #details, #newProjectForm {
     margin: 1em;
-    width:100%;
+    width:80%;
     height: 2em;
     border: 3px inset #C38D9E;
-border-radius: 5px;
+/* border-radius: 5px; */
+}
+.details>p{ 
+    border:1px solid #C38D9E;
+    border-radius: 10px;
+    padding: 6px 24px;
+    box-shadow: 0.2rem 0.5rem 1rem rgb(0 0 0 / 25%);
 }
 #priorityButton {
-    height:5em;
-    width: 5em;
+    height:6em;
+    width: 6em;
     border-radius: 50%;
     border-top: 3px inset #C38D9E;
     border-bottom:3px inset #C38D9E;
-    border-right: 3px inset #C38D9E;
     margin-bottom: 1em;
+    font-size: 12px;
 }
 #details {
     height: 5em;
 }
+
+#submit {
+box-shadow: 0.2rem 0.5rem 1rem rgb(0 0 0 / 40%);
+}
+
+
 
 
 .hidden {

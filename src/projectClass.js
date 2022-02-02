@@ -105,4 +105,10 @@ export class Task {
         localStorage.setItem("tasks", JSON.stringify(tasks))
     }
 
+    toggleDetails() {
+        const thisTask = document.getElementById(this.name);
+        const taskDetails = document.createElement("div");
+        // const 
+    }
+
 }

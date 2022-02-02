@@ -1,6 +1,7 @@
 import { writeHeader } from "./writeHeaderForNewTask";
 import { writeNewTaskSidebar } from "./writeNewTaskSidebar";
 import { newForm } from "./newTaskForm";
+import { toggleBackgroundBlur } from "./toggleBackgroundBlur";
 let newTaskWindowExists = false;
 const newTaskWindow = document.createElement("div");
 const newTaskContent = document.createElement("div");
@@ -9,6 +10,7 @@ export {taskOrProject}
 
 
 export function displayNewTaskWindow(window) {
+    toggleBackgroundBlur()
     if(!newTaskWindowExists) {
         newTaskWindow.classList.add("newTaskWindow");
         newTaskContent.classList.add("newTaskContent")
