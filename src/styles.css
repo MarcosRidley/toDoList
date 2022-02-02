@@ -16,7 +16,7 @@ main {
     flex-direction: column;
     width: fit-content;
 }
-@media (min-width: 656px)
+@media (min-width: 490px)
 {
   main {
       width: 100%;
@@ -179,6 +179,7 @@ border-right: 10px solid #d38d9e;
     align-items: center;
 }
 .spread>p {
+    color:#501F3A;
     margin-right: 3em;
 }
 .details {
@@ -186,9 +187,11 @@ border-right: 10px solid #d38d9e;
     align-items: center;
 }
 
+
 .details>button {
     font-size: 0.5em;
     margin: 0em 1em;
+    background-color: white;
 }
 .details>button:hover {
     transform:scale(1.1)
@@ -292,10 +295,15 @@ display: flex;
 /* border-radius: 5px; */
 }
 .details>p{ 
-    border:1px solid #C38D9E;
+
     border-radius: 10px;
     padding: 6px 24px;
     box-shadow: 0.2rem 0.5rem 1rem rgb(0 0 0 / 25%);
+}
+.details>button, .details>p {
+    border: 3px solid #3BA395;
+    color: #3BA395;
+    transform: scale(0.8);
 }
 #priorityButton {
     height:6em;
@@ -308,6 +316,18 @@ display: flex;
 }
 #details {
     height: 5em;
+}
+.taskDetailsHandler {
+    border: 2px solid #3BA395;
+    border-radius: 8px;
+    padding: 0.5em;
+    text-align: center;
+}
+.taskDetailsHandler>p {
+    border:0px solid black;
+    border-bottom-width: 1px;
+    text-decoration:underline;
+    color:#3BA395
 }
 
 #submit {

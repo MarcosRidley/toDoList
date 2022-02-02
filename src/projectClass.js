@@ -20,7 +20,7 @@ export class Project {
         this.turnActive(document.getElementById(this.projectName))
         const activeProject = defineActive();
         for(let i = 0; i < tasks.length; i++) {
-            if(document.getElementById(tasks[i].title)){tasks[i].removeTask(document.getElementById(`${tasks[i].title}.task`), false);}
+            if(document.getElementById(`${tasks[i].title}.task`)){tasks[i].removeTask(document.getElementById(`${tasks[i].title}.task`), false);}
         }
          for(let i = 0; i < tasks.length; i++){
             if(tasks[i].project == activeProject) {
@@ -59,6 +59,7 @@ export class Task {
         this.project = project;
         this.completed = completed;
         tasks.push(this)
+        this.detailsExist = false;
     }
     set definePriority(priority) {
         this.priority = priority
@@ -106,20 +107,26 @@ export class Task {
     }
 
     toggleDetails() {
-        const thisTask = document.getElementById(`${this.title}.task`);
-        const taskDetailsDiv = document.createElement("div");
-        const taskDetails = document.createElement("div");
-        taskDetailsDiv.id = `${this.title}.details`;
-            const taskDetailsProject = document.createElement("p");
-                taskDetailsProject.textContent = `Project name: ${this.project}`;
-                taskDetails.appendChild(taskDetailsProject);
-            const taskDetailsDetails = document.createElement("p");
-                taskDetailsDetails.textContent = `Details: ${this.details}`;
-                taskDetails.appendChild(taskDetailsDetails);
-            const taskDetailsPriority = document.createElement("p");
-                taskDetailsPriority.textContent = `Priority: ${this.priority}`;
-                taskDetails.appendChild(taskDetailsPriority);
-                taskDetailsDiv.appendChild(taskDetails);
-                thisTask.appendChild(taskDetailsDiv);
+        if(!this.detailsExist){
+            const thisTask = document.getElementById(`${this.title}.task`);
+            const taskDetailsDiv = document.createElement("div");
+            const taskDetails = document.createElement("div");
+            taskDetails.classList.add("taskDetailsHandler")
+            taskDetailsDiv.id = `${this.title}.details`;
+                const taskDetailsProject = document.createElement("p");
+                    this.project == "generalButton"? taskDetailsProject.textContent = `No project assignment` : taskDetailsProject.textContent = `Project name: ${this.project}`;
+                    taskDetails.appendChild(taskDetailsProject);
+                const taskDetailsDetails = document.createElement("p");
+                    taskDetailsDetails.textContent = `Details: ${this.details}`;
+                    taskDetails.appendChild(taskDetailsDetails);
+                const taskDetailsPriority = document.createElement("p");
+                    taskDetailsPriority.textContent = `Priority: ${this.priority}`;
+                    taskDetails.appendChild(taskDetailsPriority);
+                    taskDetailsDiv.appendChild(taskDetails);
+                    thisTask.appendChild(taskDetailsDiv);
+                    this.detailsExist = true;
+        } else {
+            document.getElementById(`${this.title}.details`).classList.toggle("hidden");
+        }
     }
 }
