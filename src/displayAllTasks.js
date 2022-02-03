@@ -9,5 +9,6 @@ export function displayAllTasks() {
     }
      for(let i = 0; i < tasks.length; i++){
             tasks[i].writeToDOM();
+            tasks[i].detailsExist = false;
     }
 }

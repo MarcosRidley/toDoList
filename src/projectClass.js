@@ -25,6 +25,7 @@ export class Project {
          for(let i = 0; i < tasks.length; i++){
             if(tasks[i].project == activeProject) {
                 tasks[i].writeToDOM();
+                tasks[i].detailsExist = false;
             }
         }
     }
@@ -91,7 +92,7 @@ export class Task {
             everythingElse.appendChild(dueDate);
             const details = document.createElement("button");
             details.textContent = "Details";
-            details.addEventListener("click", () => this.toggleDetails())
+            details.addEventListener("click", () => this.toggleDetails(title))
             everythingElse.appendChild(details);
             this.addPriorityStyle(task)
             const deleteButton = document.createElement("button");
@@ -123,10 +124,11 @@ export class Task {
                     taskDetailsPriority.textContent = `Priority: ${this.priority}`;
                     taskDetails.appendChild(taskDetailsPriority);
                     taskDetailsDiv.appendChild(taskDetails);
-                    thisTask.appendChild(taskDetailsDiv);
+                    thisTask.append(taskDetailsDiv);
                     this.detailsExist = true;
         } else {
             document.getElementById(`${this.title}.details`).classList.toggle("hidden");
+
         }
     }
 }

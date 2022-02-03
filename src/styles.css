@@ -327,7 +327,8 @@ display: flex;
     border:0px solid black;
     border-bottom-width: 1px;
     text-decoration:underline;
-    color:#3BA395
+    color:#3BA395;
+    overflow-wrap: anywhere;
 }
 
 #submit {
