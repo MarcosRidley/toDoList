@@ -1,351 +1,347 @@
 html {
-    display: flex;
+  display: flex;
 }
 
 body {
-    margin:0;
-    width: 100%;
-    background: linear-gradient(to right bottom, rgba(3, 105, 92, 0.8), rgba(117, 216, 213, 0.9)), url("woodbackground.jpg");
-    font-family:Tahoma, sans-serif;
-    font-size: 32px;
-    display: flex;
-    flex-direction:column;
+  margin: 0;
+  width: 100%;
+  background: linear-gradient(
+      to right bottom,
+      rgba(3, 105, 92, 0.8),
+      rgba(117, 216, 213, 0.9)
+    ),
+    url('woodbackground.jpg');
+  font-family: Tahoma, sans-serif;
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
 }
 main {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
 }
-@media (min-width: 490px)
-{
+@media (min-width: 490px) {
   main {
-      width: 100%;
+    width: 100%;
   }
 }
 
-
-
 p {
-    font-size: 16px;
+  font-size: 16px;
 }
 img {
-    color:white
+  color: white;
 }
 .header-div {
-    display: inline-flex;
-    justify-content: space-between;
-    font-size: 24px;
-    align-items: center;
+  display: inline-flex;
+  justify-content: space-between;
+  font-size: 24px;
+  align-items: center;
 }
-.header-div, .newTaskHeader {
-    background-color: #C38D9E;
+.header-div,
+.newTaskHeader {
+  background-color: #c38d9e;
 }
-.header-div>p, .newTaskHeader>div {
-    color: white;
-    padding: 0.3em 1em 0.4em;
+.header-div > p,
+.newTaskHeader > div {
+  color: white;
+  padding: 0.3em 1em 0.4em;
 }
 
 .copyright {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    font-size: 20px;
-    align-items: center;
-    margin: 0.5em 1em;
-    color: white
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 20px;
+  align-items: center;
+  margin: 0.5em 1em;
+  color: white;
 }
 
 #github:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
-
 
 .planner {
-    display: flex;
+  display: flex;
 }
 .tabs {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    background-color: #EEEEEE;
-    border-right: 1px solid black;
-    justify-content: space-between;
-    padding: 0 0.5em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #eeeeee;
+  border-right: 1px solid black;
+  justify-content: space-between;
+  padding: 0 0.5em;
 }
 .tab {
-    padding-bottom: .8em;
+  padding-bottom: 0.8em;
 }
-.tab-btn, .details>button, #submit {
-	box-shadow: 0.2rem 0.5rem 1rem rgb(0 0 0 / 40%);
-    color:#501F3A;
-	border-radius:5px;
-    width: 100%;
-	cursor:pointer;
-	font-family:inherit;
-	font-size:28px;
-	padding:6px 24px;
-	text-decoration:none;
+.tab-btn,
+.details > button,
+#submit {
+  box-shadow: 0.2rem 0.5rem 1rem rgb(0 0 0 / 40%);
+  color: #501f3a;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 28px;
+  padding: 6px 24px;
+  text-decoration: none;
 }
 #generalButton {
-    margin-top: 1em;
-    border-radius: 5px;
-    transform:scale(1.1)
+  margin-top: 1em;
+  border-radius: 5px;
+  transform: scale(1.1);
 }
-#projects, .newButton {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+#projects,
+.newButton {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-#projects>.project {
-    text-align: center;
-    padding: 6px 24px;
+#projects > .project {
+  text-align: center;
+  padding: 6px 24px;
 }
 
-
-.tab-btn:hover, .project:hover {
-border-right: 10px solid #d38d9e;
+.tab-btn:hover,
+.project:hover {
+  border-right: 10px solid #d38d9e;
 }
 .tab-btn:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
-.tab-btn+.project {
-    margin-top: 16px;
+.tab-btn + .project {
+  margin-top: 16px;
 }
-
 
 #newButton {
-    height: 2.5em;
-    width: 2.5em;
-    background-color:#C38D9E;
-    cursor:pointer;
-    font-family:inherit;
-    font-size:30px;
-    padding:6px 24px;
-    border-radius: 50%;
-    margin-bottom:1em;
-    box-shadow: 0.2rem 0.5rem 1rem rgb(0 0 0 / 40%);
-    transition-duration: 0.3s;
-    transition-property:transform;
-    }
-    
+  height: 2.5em;
+  width: 2.5em;
+  background-color: #c38d9e;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 30px;
+  padding: 6px 24px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  box-shadow: 0.2rem 0.5rem 1rem rgb(0 0 0 / 40%);
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
 #newButton:hover {
-
-    transform: scale(1.3)
-    }
+  transform: scale(1.3);
+}
 #newButton:active {
-    position:relative;
-    top:1px;
-    }
+  position: relative;
+  top: 1px;
+}
 
-.blur{
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-    }
-
+.blur {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
 
 .display {
-    flex: 4;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
+  flex: 4;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
 }
 #content {
-    margin: 0 0 0.5em 0.1em
+  margin: 0 0 0.5em 0.1em;
 }
 
-#content>div {
-    padding: 0.2em;
+#content > div {
+  padding: 0.2em;
 }
 .lowPriority {
-    border-left: 10px solid #1D8E1D;
-    border-right: 10px solid #1D8E1D;
+  border-left: 10px solid #1d8e1d;
+  border-right: 10px solid #1d8e1d;
 }
 .mediumPriority {
-    border-left: 10px solid#FFA500;
-    border-right: 10px solid#FFA500;
+  border-left: 10px solid#FFA500;
+  border-right: 10px solid#FFA500;
 }
 .highPriority {
-    border-left: 10px solid #FF0000;
-    border-right: 10px solid #FF0000;
+  border-left: 10px solid #ff0000;
+  border-right: 10px solid #ff0000;
 }
-
 
 .spread {
-    display: flex;
-    justify-content:space-between;
-    border-bottom: 1px solid black;
-    margin: 1px;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  margin: 1px;
+  align-items: center;
 }
-.spread>p {
-    color:#501F3A;
-    margin-right: 3em;
+.spread > p {
+  color: #501f3a;
+  margin-right: 3em;
 }
 .details {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-
-.details>button {
-    font-size: 0.5em;
-    margin: 0em 1em;
-    background-color: white;
+.details > button {
+  font-size: 0.5em;
+  margin: 0em 1em;
+  background-color: white;
 }
-.details>button:hover {
-    transform:scale(1.1)
+.details > button:hover {
+  transform: scale(1.1);
 }
-
 
 /* aqui vai entrar os styles da aba de detalhes e da div que faz o main inteiro dar blur */
 
-
 .newTaskWindow {
-    background-color: #fff;
-    width: 70%;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px 5px #222
+  background-color: #fff;
+  width: 70%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 5px #222;
 }
 .newTaskHeader {
-
-    background-color: #c38d9e;
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-    display: flex;
-    justify-content: space-between;
+  background-color: #c38d9e;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
 }
-.newTaskHeader>div {
-    padding: 10px
+.newTaskHeader > div {
+  padding: 10px;
 }
 
 .closingDiv {
-    border-radius: 0px 10px 3px 20px ;
-    cursor:pointer;
+  border-radius: 0px 10px 3px 20px;
+  cursor: pointer;
 }
 .closingDiv:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 .newTaskContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.newTaskSideBar{
-    margin: 0.2em
+.newTaskSideBar {
+  margin: 0.2em;
 }
 
 .projectOrTask {
-    display:flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-.projectOrTask>button {
-    margin: 5px
+.projectOrTask > button {
+  margin: 5px;
 }
 
-.active, .inactive {
-    margin: 2px 5px;
+.active,
+.inactive {
+  margin: 2px 5px;
 }
 .inactive {
-    background: 0;
-    background-color: gray;
-    transform: scale(0.9)
+  background: 0;
+  background-color: gray;
+  transform: scale(0.9);
 }
 .active {
-    border-right: 10px solid #c38d9e;
+  border-right: 10px solid #c38d9e;
 }
 
 .activeBtn {
-    background-color: #c38d9e;
-    color: #eee;
+  background-color: #c38d9e;
+  color: #eee;
 }
-.activeBtn:hover, .inactiveBtn:hover {
-    border-right:2px solid rgb(118, 118, 118)
+.activeBtn:hover,
+.inactiveBtn:hover {
+  border-right: 2px solid rgb(118, 118, 118);
 }
 
 .newTaskFormContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 4px solid #c38d9e;
-    border-radius: 8px;
-    padding: 0.5em;
-    margin: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 4px solid #c38d9e;
+  border-radius: 8px;
+  padding: 0.5em;
+  margin: 1em;
 }
-#newTaskForm{
-display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+#newTaskForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
-#newTaskForm>input, #newProjectForm {
-    box-shadow: 0.2rem 0.5rem 1rem rgb(0 0 0 / 20%);
-    border-width: 5px;
-    border-radius: 12px;
+#newTaskForm > input,
+#newProjectForm {
+  box-shadow: 0.2rem 0.5rem 1rem rgb(0 0 0 / 20%);
+  border-width: 5px;
+  border-radius: 12px;
 }
-#title, #date, #details, #newProjectForm {
-    margin: 1em;
-    width:80%;
-    height: 2em;
-    border: 3px inset #C38D9E;
-/* border-radius: 5px; */
+#title,
+#date,
+#details,
+#newProjectForm {
+  margin: 1em;
+  width: 80%;
+  height: 2em;
+  border: 3px inset #c38d9e;
+  /* border-radius: 5px; */
 }
-.details>p{ 
-
-    border-radius: 10px;
-    padding: 6px 24px;
-    box-shadow: 0.2rem 0.5rem 1rem rgb(0 0 0 / 25%);
+.details > p {
+  border-radius: 10px;
+  padding: 6px 24px;
+  box-shadow: 0.2rem 0.5rem 1rem rgb(0 0 0 / 25%);
 }
-.details>button, .details>p {
-    border: 3px solid #3BA395;
-    color: #3BA395;
-    transform: scale(0.8);
+.details > button,
+.details > p {
+  border: 3px solid #3ba395;
+  color: #3ba395;
+  transform: scale(0.8);
 }
 #priorityButton {
-    height:6em;
-    width: 6em;
-    border-radius: 50%;
-    border-top: 3px inset #C38D9E;
-    border-bottom:3px inset #C38D9E;
-    margin-bottom: 1em;
-    font-size: 12px;
+  height: 6em;
+  width: 6em;
+  border-radius: 50%;
+  border-top: 3px inset #c38d9e;
+  border-bottom: 3px inset #c38d9e;
+  margin-bottom: 1em;
+  font-size: 12px;
 }
 #details {
-    height: 5em;
+  height: 5em;
 }
 .taskDetailsHandler {
-    border: 2px solid #3BA395;
-    border-radius: 8px;
-    padding: 0.5em;
-    text-align: center;
-    margin-right: 0.8em;
+  border: 2px solid #3ba395;
+  border-radius: 8px;
+  padding: 0.5em;
+  text-align: center;
+  margin-right: 0.8em;
 }
-.taskDetailsHandler>p {
-    border:0px solid black;
-    border-bottom-width: 1px;
-    text-decoration:underline;
-    color:#3BA395;
-    overflow-wrap: anywhere;
+.taskDetailsHandler > p {
+  border: 0px solid black;
+  border-bottom-width: 1px;
+  text-decoration: underline;
+  color: #3ba395;
+  overflow-wrap: anywhere;
 }
 
 #submit {
-box-shadow: 0.2rem 0.5rem 1rem rgb(0 0 0 / 40%);
+  box-shadow: 0.2rem 0.5rem 1rem rgb(0 0 0 / 40%);
 }
-
-
-
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
-
-
-
-
-
 
 /* próximo passo mexer com o createbutton (id=submit) deixar quadrado e bem estiloso, bora  */

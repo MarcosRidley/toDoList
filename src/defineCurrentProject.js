@@ -1,7 +1,7 @@
-let activeProject = document.querySelector(".active").id
-export {activeProject}
+let activeProject = document.querySelector('.active').id;
+export { activeProject };
 
 export function defineActive() {
-    activeProject = document.querySelector(".active").id
-    return activeProject
+  activeProject = document.querySelector('.active').id;
+  return activeProject;
 }
