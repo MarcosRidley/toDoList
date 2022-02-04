@@ -1,6 +1,8 @@
 import { tasks } from './index.js';
 import { projects } from './index.js';
 import { defineActive } from './defineCurrentProject.js';
+import { writeHeader } from './writeHeaderForNewTask.js';
+import { toggleBackgroundBlur } from './toggleBackgroundBlur.js';
 
 export class Project {
   constructor(nomeDoProjeto) {
@@ -122,9 +124,12 @@ export class Task {
   }
 
   toggleDetails() {
+    toggleBackgroundBlur();
+    const main = document.getElementById('main');
+    const taskDetailsDiv = document.createElement('div');
     if (!this.detailsExist) {
-      const thisTask = document.getElementById(`${this.title}.task`);
-      const taskDetailsDiv = document.createElement('div');
+      taskDetailsDiv.classList.add('taskDetailsDiv');
+      writeHeader(taskDetailsDiv, 'DetailsPopup', taskDetailsDiv);
       const taskDetails = document.createElement('div');
       taskDetails.classList.add('taskDetailsHandler');
       taskDetailsDiv.id = `${this.title}.details`;
@@ -140,12 +145,10 @@ export class Task {
       taskDetailsPriority.textContent = `Priority: ${this.priority}`;
       taskDetails.appendChild(taskDetailsPriority);
       taskDetailsDiv.appendChild(taskDetails);
-      thisTask.append(taskDetailsDiv);
+      main.appendChild(taskDetailsDiv);
       this.detailsExist = true;
     } else {
-      document
-        .getElementById(`${this.title}.details`)
-        .classList.toggle('hidden');
+      document.querySelector('.taskDetailsDiv').classList.toggle('hidden');
     }
   }
 }

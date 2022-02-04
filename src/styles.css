@@ -200,7 +200,8 @@ img {
 
 /* aqui vai entrar os styles da aba de detalhes e da div que faz o main inteiro dar blur */
 
-.newTaskWindow {
+.newTaskWindow,
+.taskDetailsDiv {
   background-color: #fff;
   width: 70%;
   position: fixed;
@@ -321,9 +322,13 @@ img {
 #details {
   height: 5em;
 }
+.taskDetailsDiv {
+  width: 50%;
+  position: fixed;
+  left: 50%;
+  top: 30%;
+}
 .taskDetailsHandler {
-  border: 2px solid #3ba395;
-  border-radius: 8px;
   padding: 0.5em;
   text-align: center;
   margin-right: 0.8em;
@@ -333,7 +338,6 @@ img {
   border-bottom-width: 1px;
   text-decoration: underline;
   color: #3ba395;
-  overflow-wrap: anywhere;
 }
 
 #submit {

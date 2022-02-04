@@ -2,9 +2,9 @@ import { writeHeader } from './writeHeaderForNewTask';
 import { writeNewTaskSidebar } from './writeNewTaskSidebar';
 import { newForm } from './newTaskForm';
 import { toggleBackgroundBlur } from './toggleBackgroundBlur';
-let newTaskWindowExists = false;
-const newTaskWindow = document.createElement('div');
 const newTaskContent = document.createElement('div');
+const newTaskWindow = document.createElement('div');
+let newTaskWindowExists = false;
 let taskOrProject = 'Task';
 export { taskOrProject };
 
@@ -13,7 +13,7 @@ export function displayNewTaskWindow(window) {
   if (!newTaskWindowExists) {
     newTaskWindow.classList.add('newTaskWindow');
     newTaskContent.classList.add('newTaskContent');
-    writeHeader(newTaskWindow);
+    writeHeader(newTaskWindow, 'newTask');
     writeNewTaskSidebar(newTaskContent);
     newForm(newTaskContent);
     newTaskWindow.appendChild(newTaskContent);

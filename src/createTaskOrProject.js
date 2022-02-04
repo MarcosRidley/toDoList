@@ -18,7 +18,7 @@ export function createTaskOrProject(taskOrProject) {
       false
     );
     newTask.initialize();
-    closeNewTaskSideBar(document.querySelector('.newTaskWindow'));
+    closeNewTaskSideBar(document.querySelector('.newTaskWindow'), 'newTask');
   }
   if (taskOrProject == 'Project') {
     if (
@@ -36,7 +36,7 @@ export function createTaskOrProject(taskOrProject) {
         document.getElementById('newProjectForm').value
       );
       newProject.initialize();
-      closeNewTaskSideBar(document.querySelector('.newTaskWindow'));
+      closeNewTaskSideBar(document.querySelector('.newTaskWindow'), 'newTask');
     }
   }
 }
