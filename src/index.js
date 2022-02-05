@@ -1,6 +1,7 @@
 import { displayNewTaskWindow } from './displayNewTaskWindow.js';
 import { writeLocalStorageContent } from './writeLocalStorageContent.js';
 import { displayAllTasks } from './displayAllTasks.js';
+import './styles.css';
 let projects = [];
 let tasks = [];
 export { tasks };

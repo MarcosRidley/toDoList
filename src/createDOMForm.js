@@ -4,6 +4,8 @@ export function createDOMForm(form) {
   title.type = 'text';
   title.placeholder = 'Title';
   title.required = true;
+  title.minLength = '1';
+  title.maxLength = '40';
   form.appendChild(title);
   const date = document.createElement('input');
   date.id = 'date';
@@ -13,7 +15,8 @@ export function createDOMForm(form) {
   const details = document.createElement('input');
   details.id = 'details';
   details.type = 'text';
-  details.placeholder = 'Details about your task';
+  details.placeholder = 'Detail your task.';
+  details.maxLength = '140';
   form.appendChild(details);
   const priority = document.createElement('button');
   priority.type = 'button';

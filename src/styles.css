@@ -338,6 +338,7 @@ img {
   border-bottom-width: 1px;
   text-decoration: underline;
   color: #3ba395;
+  overflow-wrap: break-word;
 }
 
 #submit {
