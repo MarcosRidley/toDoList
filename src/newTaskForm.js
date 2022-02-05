@@ -13,6 +13,8 @@ export function newForm(window, taskOrProject = 'Task') {
   newProjectForm.id = 'newProjectForm';
   newProjectForm.type = 'text';
   newProjectForm.placeholder = 'Name your project';
+  newProjectForm.minLength = '1';
+  newProjectForm.maxLength = '40';
   newTaskWindowContent.appendChild(newProjectForm);
 
   createFormSubmit(newTaskWindowContent);
