@@ -20,6 +20,7 @@ main {
   display: flex;
   flex-direction: column;
   width: fit-content;
+  height: 100vh;
 }
 @media (min-width: 490px) {
   main {
@@ -49,6 +50,11 @@ img {
   padding: 0.3em 1em 0.4em;
 }
 
+#title-paragraph {
+  font-size: 1em;
+  font-family: cursive;
+}
+
 .copyright {
   display: flex;
   justify-content: center;
@@ -65,6 +71,7 @@ img {
 
 .planner {
   display: flex;
+  height: 100%;
 }
 .tabs {
   flex: 1;
